@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Attack Func
+    void PlayerAttack() {}
+
+    // Damage Func
+    void PlayerDamaged() {}
+
+    // Sound Occur Func
+    void PlayerSoundOccur() {}
+
+    // Interaction Obj func
+    void PlayerInteraction() {}
+
 }

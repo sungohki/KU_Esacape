@@ -18,6 +18,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private float playerAttackRange;
     [SerializeField] private float playerDamageRange;
 
+    // // Getter & Setter Funcs.
     public int getPlayerLife() {
         return (playerLife);
     }
