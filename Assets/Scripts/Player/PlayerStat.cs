@@ -17,6 +17,7 @@ public class PlayerStat : MonoBehaviour
     // Stat for Ranges
     [SerializeField] private float playerAttackRange;
     [SerializeField] private float playerDamageRange;
+    [SerializeField] private float playerSoundRange;
 
     // // Getter & Setter Funcs.
     public int getPlayerLife() {
@@ -50,14 +51,21 @@ public class PlayerStat : MonoBehaviour
     public float getPlayerAttackRange() {
         return (playerAttackRange);
     }
-    public void setPlayerAttackRange(int data) {
+    public void setPlayerAttackRange(float data) {
         playerAttackRange = data;
     }
 
     public float getPlayerDamageRange() {
         return (playerDamageRange);
     }
-    public void setPlayerDamageRange(int data) {
+    public void setPlayerDamageRange(float data) {
+        playerDamageRange = data;
+    }
+
+    public float getPlayerSoundRange() {
+        return (playerDamageRange);
+    }
+    public void setPlayerSoundRange(float data) {
         playerDamageRange = data;
     }
 }
