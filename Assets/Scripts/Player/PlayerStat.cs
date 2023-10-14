@@ -4,15 +4,59 @@ using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    // Stat for Life
+    [SerializeField] private int playerLife;
+
+    // Stat for Movement
+    [SerializeField] private float playerMoveSpeed;
+    [SerializeField] private float playerAddSpeed;
+
+    // Stat for State
+    [SerializeField] private int playerState;
+
+    // Stat for Ranges
+    [SerializeField] private float playerAttackRange;
+    [SerializeField] private float playerDamageRange;
+
+    public int getPlayerLife() {
+        return (playerLife);
+    }
+    public void set(int data) {
+        playerLife = data;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public float getPlayerMoveSpeed() {
+        return (playerMoveSpeed);
+    }
+    public void setPlayerMoveSpeed(float data) {
+        playerMoveSpeed = data;
+    }
+
+    public float getPlayerAddSpeed() {
+        return (playerAddSpeed);
+    }
+    public void setPlayerAddSpeed(float data) {
+        playerAddSpeed = data;
+    }
+
+    public int getPlayerState() {
+        return (playerState);
+    }
+    public void setPlayerState(int data) {
+        playerState = data;
+    }
+
+    public float getPlayerAttackRange() {
+        return (playerAttackRange);
+    }
+    public void setPlayerAttackRange(int data) {
+        playerAttackRange = data;
+    }
+
+    public float getPlayerDamageRange() {
+        return (playerDamageRange);
+    }
+    public void setPlayerDamageRange(int data) {
+        playerDamageRange = data;
     }
 }
