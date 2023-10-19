@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 //스네이크, 클래스는 대문자시작 잊지말기
 public class CatMoving : MonoBehaviour
@@ -10,17 +11,20 @@ public class CatMoving : MonoBehaviour
     [SerializeField] public float turn_interval;
     [SerializeField] public float roam_range;
     private bool moving_fast = false;
+    NavMeshAgent navMeshAgent;
+    [SerializeField] Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        StartCoroutine(MoveSlowly());
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0.01f, 0);
+        navMeshAgent.SetDestination(target.position);
     }
 
     IEnumerator MoveSlowly()
