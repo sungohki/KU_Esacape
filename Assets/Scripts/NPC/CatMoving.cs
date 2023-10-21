@@ -6,59 +6,49 @@ using UnityEngine.AI;
 //스네이크, 클래스는 대문자시작 잊지말기
 public class CatMoving : MonoBehaviour
 {
-    [SerializeField] public float roam_speed;
-    [SerializeField] public float rush_speed;
-    [SerializeField] public float turn_interval;
-    [SerializeField] public float roam_range;
-    private bool moving_fast = false;
     NavMeshAgent navMeshAgent;
-    [SerializeField] Transform target;
+    Vector3 initialPosition;
+    bool isSpeedBoosted = false;
 
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        StartCoroutine(MoveSlowly());
+        initialPosition = transform.position;
+
+        // 시작 시 10초마다 SpeedBoost 코루틴을 호출
+        StartCoroutine(SpeedBoostTimer());
     }
 
     // Update is called once per frame
     void Update()
     {
-        navMeshAgent.SetDestination(target.position);
-    }
-
-    IEnumerator MoveSlowly()
-    {
-        while (true)
+        if (!isSpeedBoosted)
         {
-            if (!moving_fast)
-            {
-                // 느린 속도로 이동 로직을 여기에 작성
-                // 예를 들어, NavMesh 또는 Rigidbody를 사용하여 이동
-
-                // 주기적으로 이동 방향을 변경
-                yield return new WaitForSeconds(turn_interval);
-                ChangeDirection();
-            }
-            yield return null;
+                SetRandomDestination();
         }
     }
 
-    IEnumerator MoveFast()
+    void SetRandomDestination()
     {
-        moving_fast = true;
-        // 빠른 속도로 이동 로직을 여기에 작성
-
-        yield return new WaitForSeconds(10.0f);
-
-        moving_fast = false;
-        StartCoroutine(MoveSlowly()); // 다시 느린 속도로 이동
+        Vector3 randomDirection = Random.insideUnitSphere * 10.0f;
+        randomDirection += initialPosition;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, 10.0f, NavMesh.AllAreas);
+        navMeshAgent.SetDestination(hit.position);
     }
 
-    void ChangeDirection()
+    IEnumerator SpeedBoostTimer()
     {
-        float randomAngle = Random.Range(0.0f, 360.0f);
-        transform.rotation = Quaternion.Euler(0.0f, randomAngle, 0.0f);
+        while (true)
+        {
+            yield return new WaitForSeconds(10.0f);
+            isSpeedBoosted = true;
+            navMeshAgent.speed *= 3.0f; // 속도를 3배로 증가
+            yield return new WaitForSeconds(3.0f);
+            isSpeedBoosted = false;
+            navMeshAgent.speed /= 3.0f; // 원래 속도로 복원
+        }
     }
 }
 
