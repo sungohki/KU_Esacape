@@ -25,6 +25,15 @@ public class PlayerMoving : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift)) //왼쉬프트 눌렀을때
         {
             now_speed = default_speed * 1.5f; //두배로~
+
+            //경비원 스크립트가 있는 게임 오브젝트 찾기
+            SecurityMoving securityGuard = FindObjectOfType<SecurityMoving>();
+            if (securityGuard != null)
+            {
+                // 경비원에게 soundPosition 전달
+                securityGuard.HearSound(transform.position);
+            }
+
         }
 
         else
