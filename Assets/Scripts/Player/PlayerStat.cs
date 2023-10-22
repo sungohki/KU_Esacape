@@ -11,8 +11,9 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private float playerMoveSpeed = 10;
     [SerializeField] private float playerAddSpeed = 1.5f;
 
-    // // Stat for State
-    // [SerializeField] private int playerState;
+    // Stat for State
+    [SerializeField] private bool playerAttack = false;
+    // {false:default, true:attackAvailable}
 
     // // Stat for Ranges
     // [SerializeField] private float playerAttackRange;
@@ -41,12 +42,12 @@ public class PlayerStat : MonoBehaviour
         playerAddSpeed = data;
     }
 
-    // public int getPlayerState() {
-    //     return (playerState);
-    // }
-    // public void setPlayerState(int data) {
-    //     playerState = data;
-    // }
+    public bool getPlayerAttack() {
+        return (playerAttack);
+    }
+    public void setPlayerAttack(bool data) {
+        playerAttack = data;
+    }
 
     // public float getPlayerAttackRange() {
     //     return (playerAttackRange);
