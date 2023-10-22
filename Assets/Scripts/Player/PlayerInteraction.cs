@@ -14,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
             }
             // Testing
             door = GameObject.Find("Gate");
-            door.GetComponent<Gate>().openDoor();
+            GetComponent<Gate>().openDoor();
         }
     }
 }
