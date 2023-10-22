@@ -3,14 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    string destination;
+    GameObject door;
 
-    private void OnCollisionStay(Collision other) {
+    private void OnTriggerStay(Collider other) {
         if (other.gameObject.tag == "Door") {
+            // 1. Door Interaction
             if (Input.GetKey(KeyCode.F)) {
-                // TODO: Change The Scene
-                SceneManager.LoadScene(other.gameObject.name);
+                // // TODO: Change The Scene
+                // SceneManager.LoadScene(other.gameObject.name);
             }
+            // Testing
+            door = GameObject.Find("Gate");
+            door.GetComponent<Gate>().openDoor();
         }
     }
 }

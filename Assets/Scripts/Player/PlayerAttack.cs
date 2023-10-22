@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
-        Debug.Log($"Sight Collision Occured : {other.gameObject.name}");
+        if (other.gameObject.tag != "Untagged")
+            Debug.Log($"Sight Collision Occured : {other.gameObject.tag}");
     }
     private void OnTriggerStay(Collider other) {
         // Press Attack key 
