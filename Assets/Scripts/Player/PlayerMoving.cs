@@ -18,8 +18,8 @@ public class PlayerMoving : MonoBehaviour
 
     void Update()
     {
-        var h = Input.GetAxis("Horizontal");
-        var v = Input.GetAxis("Vertical");
+        var playerH = Input.GetAxis("Horizontal");
+        var playerV = Input.GetAxis("Vertical");
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -30,8 +30,8 @@ public class PlayerMoving : MonoBehaviour
                 // Running Sound Occur & Transmission sound position
                 securityGuard.HearSound(transform.position);
         }
-        dir = new Vector3(h, 0, v) * playerSpd;
-        transform.rotation = Quaternion.Euler(0, Mathf.Atan2(h, v) * Mathf.Rad2Deg, 0); // Handle "rotation"
+        dir = new Vector3(playerH, 0, playerV) * playerSpd;
+        transform.rotation = Quaternion.Euler(0, Mathf.Atan2(playerH, playerV) * Mathf.Rad2Deg, 0); // Handle "rotation"
         cc.Move(dir * Time.deltaTime);     // Handle "movement"
     }
 }

@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerDamaged : MonoBehaviour
 {
     PlayerStat playerStat;
-    public GameManager manager;
     private int playerLife;
     private bool isInvulnerable;
     private Renderer playerRenderer;
@@ -23,8 +22,7 @@ public class PlayerDamaged : MonoBehaviour
     {
         // Debug.Log($"Player Life : {playerLife}");   // Test output
         if (isInvulnerable)
-            // Blinking Effect 
-            playerRenderer.enabled = !playerRenderer.enabled;
+            playerRenderer.enabled = !playerRenderer.enabled;   // Blinking Effect 
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -39,15 +37,16 @@ public class PlayerDamaged : MonoBehaviour
             isInvulnerable = true;
             Invoke("toggleInvulnerable", 3.0f);     // Invulnerate for 3.0 seconds
 
-            if (playerLife <= 0)
-            {
-                Debug.Log("GameOver");
-                // Game Stop
-                Time.timeScale = 0;
+            
+        } else if (other.gameObject.CompareTag("Security")) {
+            // Game over
+            playerLife = 0;
+        }
 
-                // Use GameManger Script
-                // manager.GameOver();
-            }
+        if (playerLife <= 0) {
+            // 1. Game Stop
+            Debug.Log("GameOver");
+            // Time.timeScale = 0;
         }
     }
 
