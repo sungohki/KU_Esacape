@@ -11,19 +11,19 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private float playerMoveSpeed = 10;
     [SerializeField] private float playerAddSpeed = 1.5f;
 
-    // Stat for State
-    [SerializeField] private int playerState;
+    // // Stat for State
+    // [SerializeField] private int playerState;
 
-    // Stat for Ranges
-    [SerializeField] private float playerAttackRange;
-    [SerializeField] private float playerDamageRange;
-    [SerializeField] private float playerSoundRange;
+    // // Stat for Ranges
+    // [SerializeField] private float playerAttackRange;
+    // [SerializeField] private float playerDamageRange;
+    // [SerializeField] private float playerSoundRange;
 
     // // Getter & Setter Funcs.
     public int getPlayerLife() {
         return (playerLife);
     }
-    public void set(int data) {
+    public void setPlayerLife(int data) {
         playerLife = data;
     }
 
@@ -41,31 +41,31 @@ public class PlayerStat : MonoBehaviour
         playerAddSpeed = data;
     }
 
-    public int getPlayerState() {
-        return (playerState);
-    }
-    public void setPlayerState(int data) {
-        playerState = data;
-    }
+    // public int getPlayerState() {
+    //     return (playerState);
+    // }
+    // public void setPlayerState(int data) {
+    //     playerState = data;
+    // }
 
-    public float getPlayerAttackRange() {
-        return (playerAttackRange);
-    }
-    public void setPlayerAttackRange(float data) {
-        playerAttackRange = data;
-    }
+    // public float getPlayerAttackRange() {
+    //     return (playerAttackRange);
+    // }
+    // public void setPlayerAttackRange(float data) {
+    //     playerAttackRange = data;
+    // }
 
-    public float getPlayerDamageRange() {
-        return (playerDamageRange);
-    }
-    public void setPlayerDamageRange(float data) {
-        playerDamageRange = data;
-    }
+    // public float getPlayerDamageRange() {
+    //     return (playerDamageRange);
+    // }
+    // public void setPlayerDamageRange(float data) {
+    //     playerDamageRange = data;
+    // }
 
-    public float getPlayerSoundRange() {
-        return (playerDamageRange);
-    }
-    public void setPlayerSoundRange(float data) {
-        playerDamageRange = data;
-    }
+    // public float getPlayerSoundRange() {
+    //     return (playerDamageRange);
+    // }
+    // public void setPlayerSoundRange(float data) {
+    //     playerDamageRange = data;
+    // }
 }
