@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDamaged : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class PlayerDamaged : MonoBehaviour
             // 1. Game Stop
             Debug.Log("GameOver");
             // Time.timeScale = 0;
+            // SceneManager.LoadScene("SampleScene");
         }
     }
 
