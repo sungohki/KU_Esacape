@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - Door
   - Security
+  - Key
   layers:
   - Default
   - TransparentFX
