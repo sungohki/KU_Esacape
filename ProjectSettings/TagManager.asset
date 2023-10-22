@@ -8,6 +8,7 @@ TagManager:
   - SecuritySight
   - NPC
   - Door
+  - Security
   layers:
   - Default
   - TransparentFX
