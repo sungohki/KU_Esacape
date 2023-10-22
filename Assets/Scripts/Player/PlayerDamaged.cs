@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerDamaged : MonoBehaviour
 {
     PlayerStat playerStat;
-
+    public GameManager manager;
     private int playerLife;
     private bool isInvulnerable;
     private Renderer playerRenderer;
@@ -38,6 +38,16 @@ public class PlayerDamaged : MonoBehaviour
             // 2. toggle Invulnerablity
             isInvulnerable = true;
             Invoke("toggleInvulnerable", 3.0f);     // Invulnerate for 3.0 seconds
+
+            if (playerLife <= 0)
+            {
+                Debug.Log("GameOver");
+                // Game Stop
+                Time.timeScale = 0;
+
+                // Use GameManger Script
+                // manager.GameOver();
+            }
         }
     }
 

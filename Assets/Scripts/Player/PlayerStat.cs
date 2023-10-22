@@ -45,6 +45,7 @@ public class PlayerStat : MonoBehaviour
     public bool getPlayerAttack() {
         return (playerAttack);
     }
+
     public void setPlayerAttack(bool data) {
         playerAttack = data;
     }
