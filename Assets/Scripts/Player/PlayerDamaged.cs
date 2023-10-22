@@ -40,6 +40,7 @@ public class PlayerDamaged : MonoBehaviour
             
         } else if (other.gameObject.CompareTag("Security")) {
             // Game over
+
             playerLife = 0;
         }
 
