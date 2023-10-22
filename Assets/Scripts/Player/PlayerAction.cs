@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour
 {
+    void Update() {
+        PlayerAttack();
+        PlayerDamaged();
+        PlayerSoundOccur();
+        PlayerInteraction();
+    }
 
     // Attack Func
     void PlayerAttack() {
         // 공격키를 입력하는 경우
-        if(Input.GetKey(KeyCode.K)) {
-            // 공격 모션 적용
+        if(Input.GetKey(KeyCode.Space)) {
+            // TODO: Add Attack Motion
 
             // playerAttackRange 내에 NPC 객체가 있는 경우
-            
         }
     }
 

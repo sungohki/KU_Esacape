@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerStat : MonoBehaviour
 {
     // Stat for Life
-    [SerializeField] private int playerLife;
+    [SerializeField] private int playerLife = 3;
 
     // Stat for Movement
-    [SerializeField] private float playerMoveSpeed;
-    [SerializeField] private float playerAddSpeed;
+    [SerializeField] private float playerMoveSpeed = 10;
+    [SerializeField] private float playerAddSpeed = 1.5f;
 
     // Stat for State
     [SerializeField] private int playerState;
