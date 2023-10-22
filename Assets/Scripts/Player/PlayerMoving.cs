@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMoving : MonoBehaviour
 {
-    PlayerStat playerStat = new PlayerStat();
+    PlayerStat playerStat;
     Vector3 dir;
     CharacterController cc;
     private float playerSpd;
@@ -12,6 +12,7 @@ public class PlayerMoving : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();       // add Ref of Character Controller
+        playerStat = GameObject.FindAnyObjectByType<PlayerStat>();
         playerSpd = playerStat.getPlayerMoveSpeed();    // set Player Speed
     }
 

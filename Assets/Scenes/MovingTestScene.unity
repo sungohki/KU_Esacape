@@ -595,6 +595,7 @@ MonoBehaviour:
   playerLife: 3
   playerMoveSpeed: 10
   playerAddSpeed: 1.5
+  playerAttack: 0
 --- !u!1 &553864981
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +818,7 @@ GameObject:
   - component: {fileID: 995540117}
   - component: {fileID: 995540116}
   - component: {fileID: 995540115}
+  - component: {fileID: 995540118}
   m_Layer: 0
   m_Name: DamageRange
   m_TagString: Untagged
@@ -833,7 +835,7 @@ Transform:
   m_GameObject: {fileID: 995540113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0, y: -0.325, z: 0}
   m_LocalScale: {x: 2, y: 0.001, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -912,6 +914,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995540113}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &995540118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995540113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13a7b0469663fc46a990fda97ab8232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1359682486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1516,8 @@ GameObject:
   - component: {fileID: 2048830571}
   - component: {fileID: 2048830570}
   - component: {fileID: 2048830572}
+  - component: {fileID: 2048830574}
+  - component: {fileID: 2048830573}
   m_Layer: 0
   m_Name: PlayerSight
   m_TagString: Sight
@@ -1589,12 +1605,36 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 10, y: 0.1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2048830573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048830567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d797283dc8f9a345b86a9a81b53ab23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2048830574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048830567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50aa1839a8e5fe40a01bcfbe9a6f02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4611146279276044231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1643,9 +1683,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1673119747948900051, guid: 06012476cc735c842a1719d3a641dd75, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2101577456430565917, guid: 06012476cc735c842a1719d3a641dd75, type: 3}
       propertyPath: m_Name
       value: Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101577456430565917, guid: 06012476cc735c842a1719d3a641dd75, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6,10 +6,10 @@ public class Cat : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Weapon"))
-        {
-            // ÇÃ·¹ÀÌ¾î¿Í Ãæµ¹ÇÏ¸é Cat ¿ÀºêÁ§Æ®¸¦ ÆÄ±«
-            Destroy(gameObject);
-        }
+        // if (collision.gameObject.CompareTag("Sight"))
+        // {
+        //     // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ ï¿½æµ¹ï¿½Ï¸ï¿½ Cat ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ä±ï¿½
+        //     Destroy(gameObject);
+        // }
     }
 }

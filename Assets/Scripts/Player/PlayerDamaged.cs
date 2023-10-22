@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerDamaged : MonoBehaviour
 {
-    PlayerStat playerStat = new PlayerStat();
+    PlayerStat playerStat;
 
     private int playerLife;
     private bool isInvulnerable;
@@ -10,6 +10,8 @@ public class PlayerDamaged : MonoBehaviour
     private GameObject player;
     private void Start() {
         player = GameObject.Find("Player");
+        // Debug.Log($"player is {player}");
+        playerStat = GameObject.FindAnyObjectByType<PlayerStat>();
         playerLife = playerStat.getPlayerLife();
         if (playerLife < 1)
             playerLife = 3;
@@ -19,13 +21,15 @@ public class PlayerDamaged : MonoBehaviour
 
     private void Update()
     {
+        // Debug.Log($"Player Life : {playerLife}");   // Test output
         if (isInvulnerable)
             // Blinking Effect 
             playerRenderer.enabled = !playerRenderer.enabled;
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         // Collision with DamageRange and NPC obj
+        Debug.Log($"Damage Trigger Occured : {other.gameObject.tag}");
         if (other.gameObject.CompareTag("NPC")) {
             // 1. reduce hp
             playerLife--;
