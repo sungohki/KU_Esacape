@@ -29,7 +29,7 @@ public class PlayerDamaged : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         // Collision with DamageRange and NPC obj
-        Debug.Log($"Damage Trigger Occured : {other.gameObject.tag}");
+        // Debug.Log($"Damage Trigger Occured : {other.gameObject.tag}");
         if (other.gameObject.CompareTag("NPC")) {
             // 1. reduce hp
             playerLife--;

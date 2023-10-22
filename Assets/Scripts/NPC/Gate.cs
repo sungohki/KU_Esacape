@@ -2,58 +2,44 @@ using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
-    [SerializeField] private GameObject door; // ¹® ¿ÀºêÁ§Æ®
+    [SerializeField] private GameObject door; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
-    private Vector3 closedPosition; // ¹®ÀÌ ´ÝÇôÀÖ´Â À§Ä¡
-    private Vector3 openPosition; // ¹®ÀÌ ¿­¸° À§Ä¡
-    private float doorSpeed = 1.0f; // ¹® ¿­¸®´Â ¼Óµµ
+    private Vector3 closedPosition; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½Ä¡
+    private Vector3 openPosition; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+    private float doorSpeed = 1.0f; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½
 
-    private bool isOpen = false; // ¹® ¿­¸² »óÅÂ
+    private bool isOpen = false; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     private void Start()
     {
-        // ÃÊ±â À§Ä¡ ¼³Á¤
+        // ï¿½Ê±ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½
         closedPosition = door.transform.position;
         openPosition = new Vector3(closedPosition.x - 1.0f, closedPosition.y, closedPosition.z);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) // ¿¹¸¦ µé¾î, ½ºÆäÀÌ½º¹Ù¸¦ ´­·¶À» ¶§
-        {
-            if (isOpen)
-            {
-                CloseDoor();
-            }
-            else
-            {
-                OpenDoor();
-            }
-        }
+        // openDoor();
     }
 
-    private void OpenDoor()
-    {
-        isOpen = true;
+    public void openDoor() {
+        if (Input.GetKey(KeyCode.Space)) // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+            isOpen = true;
+        else
+            isOpen = false;
     }
-
-    private void CloseDoor()
-    {
-        isOpen = false;
-    }
-
     private void FixedUpdate()
     {
-        // ¹®À» ¿­ ¶§
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½
         if (isOpen && Vector3.Distance(door.transform.position, openPosition) > 0.01f)
         {
-            // ¹®À» ½º¸£¸¤ ¿­±â
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             door.transform.position = Vector3.MoveTowards(door.transform.position, openPosition, doorSpeed * Time.deltaTime);
         }
-        // ¹®À» ´ÝÀ» ¶§
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         else if (!isOpen && Vector3.Distance(door.transform.position, closedPosition) > 0.01f)
         {
-            // ¹®À» ½º¸£¸¤ ´Ý±â
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý±ï¿½
             door.transform.position = Vector3.MoveTowards(door.transform.position, closedPosition, doorSpeed * Time.deltaTime);
         }
     }
