@@ -24,7 +24,7 @@ public class Gate : MonoBehaviour
 
     public void openDoor() {
         if (Input.GetKey(KeyCode.Space)) {
-            Debug.Log("Door Open");
+            // Debug.Log("Door Open");
             isOpen = true;
         }
         else {
