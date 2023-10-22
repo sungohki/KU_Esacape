@@ -23,10 +23,14 @@ public class Gate : MonoBehaviour
     }
 
     public void openDoor() {
-        if (Input.GetKey(KeyCode.Space)) // ���� ���, �����̽��ٸ� ������ ��
+        if (Input.GetKey(KeyCode.Space)) {
+            Debug.Log("Door Open");
             isOpen = true;
-        else
+        }
+        else {
+            Debug.Log("Door Close");
             isOpen = false;
+        }
     }
     private void FixedUpdate()
     {
