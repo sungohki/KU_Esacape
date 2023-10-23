@@ -48,8 +48,7 @@ public class PlayerDamaged : MonoBehaviour
         if (playerLife <= 0) {
             // 1. Game Stop
             Debug.Log("GameOver");
-            // Time.timeScale = 0;
-            // SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("GameOver");
         }
     }
 
