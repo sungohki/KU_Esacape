@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.094288744, g: 0.11945031, b: 0.15523598, a: 1}
+  m_IndirectSpecularColor: {r: 0.094285674, g: 0.11944742, b: 0.1552324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1336,6 +1336,22 @@ PrefabInstance:
     - target: {fileID: 5214093403757670857, guid: 153807e6e98edac49b7345c4c1671b9c, type: 3}
       propertyPath: m_Name
       value: NpcManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204665319316210920, guid: 153807e6e98edac49b7345c4c1671b9c, type: 3}
+      propertyPath: spawnPoints.Array.data[0].x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204665319316210920, guid: 153807e6e98edac49b7345c4c1671b9c, type: 3}
+      propertyPath: spawnPoints.Array.data[0].z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204665319316210920, guid: 153807e6e98edac49b7345c4c1671b9c, type: 3}
+      propertyPath: spawnPoints.Array.data[1].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204665319316210920, guid: 153807e6e98edac49b7345c4c1671b9c, type: 3}
+      propertyPath: spawnPoints.Array.data[1].z
+      value: -8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
