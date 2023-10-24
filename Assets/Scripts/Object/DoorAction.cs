@@ -28,7 +28,7 @@ public class DoorAction : MonoBehaviour
             isOpen = true;
         }
         else {
-            // Debug.Log("Door Close");
+            Debug.Log("Door Close");
             isOpen = false;
         }
     }

@@ -12,10 +12,16 @@ public class DoorInteaction : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other) {
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log("enter!");
         if (other.gameObject.CompareTag("Player")) {
-            // 1. set 'door'
             door.GetComponent<DoorAction>().openDoor(other);
         }
+    }
+    private void OnTriggerExit(Collider other) {
+        Debug.Log("exit!");
+        if (other.gameObject.CompareTag("Player")) {
+            door.GetComponent<DoorAction>().openDoor(other);
+        }       
     }
 }
