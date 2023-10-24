@@ -29,7 +29,7 @@ public class PlayerInteraction : MonoBehaviour
             // 3. Floor Interaction
             if (other.gameObject.CompareTag("Floor")) {
                 // TODO: Change The Scene
-                if (playerStat.getHasKey() == true) {
+                if (playerStat.getHasKey() == 1) {
                     Debug.Log("Info: Door opened");
                     SceneManager.LoadScene(other.gameObject.name);
                     // SceneManager.LoadScene("Room1");

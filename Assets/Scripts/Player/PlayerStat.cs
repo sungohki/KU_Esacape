@@ -6,15 +6,23 @@ public class PlayerStat : MonoBehaviour
 {
     // // Stats
     // Stat for Life
-    [SerializeField] private int playerLife = 3;
+    [SerializeField] private int playerLife;
 
     // Stat for Movement
-    [SerializeField] private float playerMoveSpeed = 10;
-    [SerializeField] private float playerAddSpeed = 1.5f;
+    [SerializeField] private float playerMoveSpeed;
+    [SerializeField] private float playerAddSpeed;
 
     // Stat for State
-    [SerializeField] private bool hasKey = false;
+    [SerializeField] private int hasKey;
     // {false:default, true:attackAvailable}
+    // PlayerData playerData = Resources.Load<PlayerData>("PlayerData");
+
+    private void Start() {
+        playerLife = 3;
+        playerMoveSpeed = 10;
+        playerAddSpeed = 1.5f;
+        hasKey = PlayerPrefs.GetInt("hasKey", 0);
+    }
 
     // // Getter & Setter Funcs.
     public int getPlayerLife() {
@@ -38,10 +46,10 @@ public class PlayerStat : MonoBehaviour
         playerAddSpeed = data;
     }
 
-    public bool getHasKey() {
+    public int getHasKey() {
         return (hasKey);
     }
-    public void setHasKey(bool data) {
+    public void setHasKey(int data) {
         hasKey = data;
     }
 
