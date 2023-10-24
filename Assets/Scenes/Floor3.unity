@@ -5705,7 +5705,7 @@ GameObject:
   - component: {fileID: 4756745010836136722}
   m_Layer: 6
   m_Name: Floor2
-  m_TagString: Door
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

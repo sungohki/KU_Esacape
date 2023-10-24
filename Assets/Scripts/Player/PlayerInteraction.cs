@@ -31,8 +31,9 @@ public class PlayerInteraction : MonoBehaviour
                 // TODO: Change The Scene
                 if (playerStat.getHasKey() == 1) {
                     Debug.Log("Info: Door opened");
+                    playerStat.setHasKey(0);
+                    PlayerPrefs.SetInt("hasKey", 0);
                     SceneManager.LoadScene(other.gameObject.name);
-                    // SceneManager.LoadScene("Room1");
                 }
                 else {
                     Debug.Log("Info: Don't have a key.");
