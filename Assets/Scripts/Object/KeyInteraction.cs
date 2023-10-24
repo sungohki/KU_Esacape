@@ -3,7 +3,7 @@ using UnityEngine;
 public class KeyInteraction : MonoBehaviour
 {
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             Debug.Log("Info: get a key!");
             PlayerPrefs.SetInt("hasKey", 1);

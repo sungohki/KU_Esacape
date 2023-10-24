@@ -6,11 +6,11 @@ public class PlayerStat : MonoBehaviour
 {
     // // Stats
     // Stat for Life
-    [SerializeField] private int playerLife;
+    public int playerLife = 3;
 
     // Stat for Movement
-    [SerializeField] private float playerMoveSpeed;
-    [SerializeField] private float playerAddSpeed;
+    [SerializeField] public float playerMoveSpeed;
+    [SerializeField] public float playerAddSpeed;
 
     // Stat for State
     [SerializeField] private int hasKey;
@@ -18,7 +18,7 @@ public class PlayerStat : MonoBehaviour
     // PlayerData playerData = Resources.Load<PlayerData>("PlayerData");
 
     private void Start() {
-        playerLife = 3;
+        
         playerMoveSpeed = 10;
         playerAddSpeed = 1.5f;
         hasKey = PlayerPrefs.GetInt("hasKey", 0);
