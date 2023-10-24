@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor2.unity
     guid: 688c1034f6aaa7240b22ff119f4dc43b
+  - enabled: 1
+    path: Assets/Scenes/Exit.unity
+    guid: 6377c424179ca6b4bb9082b80b2137b0
   m_configObjects: {}
