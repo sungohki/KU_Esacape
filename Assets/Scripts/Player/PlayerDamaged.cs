@@ -10,7 +10,6 @@ public class PlayerDamaged : MonoBehaviour
     private GameObject player;
     private void Start() {
         player = GameObject.Find("Player");
-        // Debug.Log($"player is {player}");
         playerStat = GameObject.FindAnyObjectByType<PlayerStat>();
         playerLife = playerStat.getPlayerLife();
         if (playerLife < 1)
@@ -27,21 +26,18 @@ public class PlayerDamaged : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        // Collision with DamageRange and NPC obj
+        // // Test: Collision with DamageRange and NPC obj
         // Debug.Log($"Damage Trigger Occured : {other.gameObject.tag}");
+
         if (other.gameObject.CompareTag("NPC")) {
             // 1. reduce hp
             playerLife--;
             Debug.Log($"Player Life : {playerLife}");   // Test output
-
             // 2. toggle Invulnerablity
             isInvulnerable = true;
             Invoke("toggleInvulnerable", 3.0f);     // Invulnerate for 3.0 seconds
-
-            
         } else if (other.gameObject.CompareTag("Security")) {
             // Game over
-
             playerLife = 0;
         }
 

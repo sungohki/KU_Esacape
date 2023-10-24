@@ -15,7 +15,7 @@ public class DoorInteaction : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             // 1. set 'door'
-            door.GetComponent<DoorAction>().openDoor();
+            door.GetComponent<DoorAction>().openDoor(other);
         }
     }
 }

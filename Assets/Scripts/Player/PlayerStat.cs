@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
 {
+    // // Stats
     // Stat for Life
     [SerializeField] private int playerLife = 3;
 
@@ -12,13 +13,8 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private float playerAddSpeed = 1.5f;
 
     // Stat for State
-    [SerializeField] private bool playerState = false;
+    [SerializeField] private bool hasKey = false;
     // {false:default, true:attackAvailable}
-
-    // // Stat for Ranges
-    // [SerializeField] private float playerAttackRange;
-    // [SerializeField] private float playerDamageRange;
-    // [SerializeField] private float playerSoundRange;
 
     // // Getter & Setter Funcs.
     public int getPlayerLife() {
@@ -42,31 +38,15 @@ public class PlayerStat : MonoBehaviour
         playerAddSpeed = data;
     }
 
-    public bool getPlayerState() {
-        return (playerState);
+    public bool getHasKey() {
+        return (hasKey);
     }
-    public void setPlayerState(bool data) {
-        playerState = data;
+    public void setHasKey(bool data) {
+        hasKey = data;
     }
 
-    // public float getPlayerAttackRange() {
-    //     return (playerAttackRange);
-    // }
-    // public void setPlayerAttackRange(float data) {
-    //     playerAttackRange = data;
-    // }
 
-    // public float getPlayerDamageRange() {
-    //     return (playerDamageRange);
-    // }
-    // public void setPlayerDamageRange(float data) {
-    //     playerDamageRange = data;
-    // }
-
-    // public float getPlayerSoundRange() {
-    //     return (playerDamageRange);
-    // }
-    // public void setPlayerSoundRange(float data) {
-    //     playerDamageRange = data;
-    // }
+    public void soundOccur() {
+        
+    }
 }

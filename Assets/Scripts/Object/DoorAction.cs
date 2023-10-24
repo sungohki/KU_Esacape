@@ -22,13 +22,13 @@ public class DoorAction : MonoBehaviour
         // openDoor();
     }
 
-    public void openDoor() {
-        if (Input.GetKey(KeyCode.Space)) {
+    public void openDoor(Collider other) {
+        if (other.gameObject.CompareTag("Player")) {
             // Debug.Log("Door Open");
             isOpen = true;
         }
         else {
-            Debug.Log("Door Close");
+            // Debug.Log("Door Close");
             isOpen = false;
         }
     }

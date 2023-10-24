@@ -15,7 +15,7 @@ public class PlayerInteraction : MonoBehaviour
             // 1. Door Interaction
             if (other.gameObject.tag == "Door") {
                 // TODO: Change The Scene
-                if (playerStat.getPlayerState() == true || true) {
+                if (playerStat.getHasKey() == true || true) {
                     Debug.Log("Info: Door opened");
                     // SceneManager.LoadScene(other.gameObject.name);
                     SceneManager.LoadScene("Room1");
@@ -25,15 +25,7 @@ public class PlayerInteraction : MonoBehaviour
                 }
             }
 
-            // 2. Key Interaction
-            if (other.gameObject.CompareTag("Key")) {
-                Debug.Log("Info: get a key!");
-                playerStat.setPlayerState(true);
-                Destroy(other.gameObject);
-            }
-
-
-            // 3. Object Interaction
+            // 2. Object Interaction
             if (other.gameObject.CompareTag("Object")) {
                 Debug.Log("Info: Destroy the Object!");
                 Destroy(other.gameObject);
