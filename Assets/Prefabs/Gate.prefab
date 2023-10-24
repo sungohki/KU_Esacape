@@ -360,10 +360,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2101577456430565917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6efae3e6238f7548b0bc3ba18006f41, type: 3}
+  m_Script: {fileID: 11500000, guid: 97dca9a3bc25a654ebc325726daf193a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 5820732584213406372}
+  door: {fileID: 0}
 --- !u!1 &5820732584213406372
 GameObject:
   m_ObjectHideFlags: 0
