@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public void OnClickRestart()
     {
-        SceneManager.LoadScene("School Hallway");
+        SceneManager.LoadScene("Floor3");
     }
 
 }
