@@ -22,15 +22,13 @@ public class DoorAction : MonoBehaviour
         // openDoor();
     }
 
-    public void openDoor(Collider other) {
-        if (other.gameObject.CompareTag("Player")) {
+    public void openDoor() {
             // Debug.Log("Door Open");
             isOpen = true;
-        }
-        else {
+    }
+    public void closeDoor() {
             Debug.Log("Door Close");
             isOpen = false;
-        }
     }
     private void FixedUpdate()
     {
