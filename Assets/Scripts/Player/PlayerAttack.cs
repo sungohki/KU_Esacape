@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    GameObject player;
+
+    private void Start() {
+        player = GameObject.Find("Player");
+    }
     private void OnTriggerEnter(Collider other) {
         // if (other.gameObject.tag != "Untagged")
         //     Debug.Log($"Sight Collision Occured : {other.gameObject.tag}");
@@ -12,8 +17,10 @@ public class PlayerAttack : MonoBehaviour
             if(Input.GetKey(KeyCode.Space)) {
                 // TODO: Add Attack Motion
 
-                // Destory NPC
+                // 1. Destory NPC
                 Destroy(other.gameObject);
+                // 2. Sound Occured
+                player.GetComponent<PlayerMoving>().SoundOccur();
             }
         }
     }

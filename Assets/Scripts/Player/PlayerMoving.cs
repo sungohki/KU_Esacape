@@ -21,14 +21,10 @@ public class PlayerMoving : MonoBehaviour
         var playerH = Input.GetAxis("Horizontal");
         var playerV = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
             playerSpd = playerStat.getPlayerMoveSpeed() * 1.5f;      // Player Running
 
-            SecurityMoving securityGuard = FindObjectOfType<SecurityMoving>();  // Security Object ref
-            if (securityGuard != null)
-                // Running Sound Occur & Transmission sound position
-                securityGuard.HearSound(transform.position);
+            SoundOccur();
         }
         if (Input.GetKeyUp(KeyCode.LeftShift)) {
             playerSpd = playerStat.getPlayerMoveSpeed();
@@ -36,5 +32,12 @@ public class PlayerMoving : MonoBehaviour
         dir = new Vector3(playerH, 0, playerV) * playerSpd;
         transform.rotation = Quaternion.Euler(0, Mathf.Atan2(playerH, playerV) * Mathf.Rad2Deg, 0); // Handle "rotation"
         cc.Move(dir * Time.deltaTime);     // Handle "movement"
+    }
+
+    public void SoundOccur() {
+        SecurityMoving securityGuard = FindObjectOfType<SecurityMoving>();  // Security Object ref
+
+        if (securityGuard != null)
+            securityGuard.HearSound(transform.position);
     }
 }

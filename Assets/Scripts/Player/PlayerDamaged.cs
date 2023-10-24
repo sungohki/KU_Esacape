@@ -33,7 +33,9 @@ public class PlayerDamaged : MonoBehaviour
             // 1. reduce hp
             playerLife--;
             Debug.Log($"Player Life : {playerLife}");   // Test output
-            // 2. toggle Invulnerablity
+            // 2. Sound Occured
+            player.GetComponent<PlayerMoving>().SoundOccur();
+            // 3. toggle Invulnerablity
             isInvulnerable = true;
             Invoke("toggleInvulnerable", 3.0f);     // Invulnerate for 3.0 seconds
         } else if (other.gameObject.CompareTag("Security")) {
