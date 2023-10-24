@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Security
   - Key
+  - Object
   layers:
   - Default
   - TransparentFX

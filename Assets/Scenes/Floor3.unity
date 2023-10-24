@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.094285704, g: 0.11944757, b: 0.1552327, a: 1}
+  m_IndirectSpecularColor: {r: 0.094285674, g: 0.11944742, b: 0.1552324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1278,6 +1278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Security
       objectReference: {fileID: 0}
+    - target: {fileID: 6481496696054276424, guid: dd4e3133b2e02cc4ab11caffd56743c4, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 3588425356113518264}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3243,7 +3247,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5075148810243125148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8080,13 +8084,27 @@ GameObject:
   - component: {fileID: 7017872191302874150}
   - component: {fileID: 825899889}
   - component: {fileID: 825899888}
+  - component: {fileID: 8190501757189356532}
   m_Layer: 6
   m_Name: locker2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &8190501757189356532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8190501757189356531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b318671335d6364c866cd867f7c04d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorKey: {fileID: 8362821399149309897, guid: f84d2a5d5b9b785498fca8975589c29e, type: 3}
 --- !u!1 &8214640331524664082
 GameObject:
   m_ObjectHideFlags: 0
@@ -8769,7 +8787,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744985320242837932}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

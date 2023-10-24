@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxInteraction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject floorKey;
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        if (floorKey != null) {
+            Instantiate(floorKey, transform.position, transform.rotation);
+        }
     }
 }

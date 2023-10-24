@@ -27,17 +27,17 @@ public class PlayerInteraction : MonoBehaviour
             }
 
             // 3. Floor Interaction
-            // if (other.gameObject.CompareTag("Floor")) {
-            //     // TODO: Change The Scene
-            //     if (playerStat.getHasKey() == true) {
-            //         Debug.Log("Info: Door opened");
-            //         SceneManager.LoadScene(other.gameObject.name);
-            //         // SceneManager.LoadScene("Room1");
-            //     }
-            //     else {
-            //         Debug.Log("Info: Don't have a key.");
-            //     }
-            // }
+            if (other.gameObject.CompareTag("Floor")) {
+                // TODO: Change The Scene
+                if (playerStat.getHasKey() == true) {
+                    Debug.Log("Info: Door opened");
+                    SceneManager.LoadScene(other.gameObject.name);
+                    // SceneManager.LoadScene("Room1");
+                }
+                else {
+                    Debug.Log("Info: Don't have a key.");
+                }
+            }
         }
     }
 }
