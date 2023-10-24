@@ -4,18 +4,13 @@ using UnityEngine.SceneManagement;
 public class PlayerInteraction : MonoBehaviour
 {
     PlayerStat playerStat;
-    GameObject door;
 
     private void Start() {
         playerStat = GameObject.FindAnyObjectByType<PlayerStat>();
     }
     private void OnTriggerStay(Collider other) {
-        // if (other.gameObject.tag == "Door") {
-        //     // Testing
-        //     door = GameObject.Find("Gate");
-        //     door.GetComponent<Gate>().openDoor();
-        // }
 
+        // Interaction Key : KeyCode.Space
         if (Input.GetKey(KeyCode.Space)) {
             // 1. Door Interaction
             if (other.gameObject.tag == "Door") {

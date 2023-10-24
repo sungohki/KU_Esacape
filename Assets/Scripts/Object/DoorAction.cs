@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Gate : MonoBehaviour
+public class DoorAction : MonoBehaviour
 {
     [SerializeField] private GameObject door; // �� ������Ʈ
 
