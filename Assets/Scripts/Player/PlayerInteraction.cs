@@ -16,8 +16,8 @@ public class PlayerInteraction : MonoBehaviour
             if (other.gameObject.tag == "Door") {
                 // TODO: Change The Scene
                 Debug.Log("Info: Door opened");
-                // SceneManager.LoadScene(other.gameObject.name);
-                SceneManager.LoadScene("Room1");
+                SceneManager.LoadScene(other.gameObject.name);
+                // SceneManager.LoadScene("Room1");
             }
 
             // 2. Object Interaction
