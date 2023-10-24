@@ -36,6 +36,13 @@ public class PlayerInteraction : MonoBehaviour
                 playerStat.setPlayerState(true);
                 Destroy(other.gameObject);
             }
+
+
+            // 3. Object Interaction
+            if (other.gameObject.CompareTag("Object")) {
+                Debug.Log("Info: Destroy the Object!");
+                Destroy(other.gameObject);
+            }
         }
     }
 }
