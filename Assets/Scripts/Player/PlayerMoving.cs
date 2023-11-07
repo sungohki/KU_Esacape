@@ -8,7 +8,8 @@ public class PlayerMoving : MonoBehaviour
     Vector3 dir;
     CharacterController cc;
     private float playerSpd;
-    
+
+
     void Start()
     {
         cc = GetComponent<CharacterController>();       // add Ref of Character Controller
@@ -26,11 +27,18 @@ public class PlayerMoving : MonoBehaviour
 
             SoundOccur();
         }
+
         if (Input.GetKeyUp(KeyCode.LeftShift)) {
             playerSpd = playerStat.getPlayerMoveSpeed();
         }
+
         dir = new Vector3(playerH, 0, playerV) * playerSpd;
-        transform.rotation = Quaternion.Euler(0, Mathf.Atan2(playerH, playerV) * Mathf.Rad2Deg, 0); // Handle "rotation"
+
+        if (dir.magnitude > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, Mathf.Atan2(playerH, playerV) * Mathf.Rad2Deg, 0);
+        }
+
         cc.Move(dir * Time.deltaTime);     // Handle "movement"
     }
 
