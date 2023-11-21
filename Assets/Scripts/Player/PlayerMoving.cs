@@ -8,6 +8,7 @@ public class PlayerMoving : MonoBehaviour
     Vector3 dir;
     CharacterController cc;
     private float playerSpd;
+    private float rotationSpeed = 100f;
 
 
     void Start()
@@ -22,27 +23,43 @@ public class PlayerMoving : MonoBehaviour
         var playerH = Input.GetAxis("Horizontal");
         var playerV = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
-            playerSpd = playerStat.getPlayerMoveSpeed() * 1.5f;      // Player Running
-
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            playerSpd = playerStat.getPlayerMoveSpeed() * 1.5f; // Player Running
             SoundOccur();
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift)) {
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
             playerSpd = playerStat.getPlayerMoveSpeed();
         }
 
-        dir = new Vector3(playerH, 0, playerV) * playerSpd;
-
-        if (dir.magnitude > 0)
+        // 이동 관련 코드
+        float moveDirection = playerV;
+        if (moveDirection < 0) // 뒤로 이동하는 경우
         {
-            transform.rotation = Quaternion.Euler(0, Mathf.Atan2(playerH, playerV) * Mathf.Rad2Deg, 0);
+            dir = transform.TransformDirection(Vector3.back) * Mathf.Abs(moveDirection) * playerSpd;
+        }
+        else if (moveDirection > 0) // 앞으로 이동하는 경우
+        {
+            dir = transform.TransformDirection(Vector3.forward) * moveDirection * playerSpd;
+        }
+        else
+        {
+            dir = Vector3.zero;
         }
 
-        cc.Move(dir * Time.deltaTime);     // Handle "movement"
+        cc.Move(dir * Time.deltaTime); // Handle "movement"
+
+        // A와 D 키로 플레이어 회전
+        if (playerH != 0)
+        {
+            transform.Rotate(Vector3.up, playerH * rotationSpeed * Time.deltaTime);
+        }
     }
 
-    public void SoundOccur() {
+    public void SoundOccur()
+    {
         SecurityMoving securityGuard = FindObjectOfType<SecurityMoving>();  // Security Object ref
 
         if (securityGuard != null)
