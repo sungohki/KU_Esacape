@@ -12,6 +12,7 @@ TagManager:
   - Key
   - Object
   - Floor
+  - Weapon
   layers:
   - Default
   - TransparentFX

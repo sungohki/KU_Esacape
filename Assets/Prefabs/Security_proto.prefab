@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 6481496696054276424}
   - component: {fileID: 2941654355278683319}
   m_Layer: 0
-  m_Name: Security_1
+  m_Name: Security_proto
   m_TagString: Security
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
