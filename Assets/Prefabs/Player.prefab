@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8aa7ab84b4c5734db7f717be6ae5c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeText: {fileID: 7823136006786612670}
+  hearts: []
   playerStat: {fileID: 9039746042606429010}
 --- !u!1 &7023178031485042216
 GameObject:
@@ -1756,6 +1756,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100054, guid: 27c4cd88025348241beae439baf0a8e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5429053190391051031}
+    - targetCorrespondingSourceObject: {fileID: 100054, guid: 27c4cd88025348241beae439baf0a8e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4318634005458537906}
   m_SourcePrefab: {fileID: 100100000, guid: 27c4cd88025348241beae439baf0a8e6, type: 3}
 --- !u!4 &7996702129474072195 stripped
 Transform:
@@ -1890,3 +1893,15 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7996702129474433763}
   m_Enabled: 1
+--- !u!114 &4318634005458537906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996702129474433763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13a7b0469663fc46a990fda97ab8232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

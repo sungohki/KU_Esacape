@@ -4,13 +4,16 @@ using UnityEngine.SceneManagement;
 public class PlayerDamaged : MonoBehaviour
 {
     PlayerStat playerStat;
+    PlayerStatUI playerStatUI;
     private int playerLife;
     private bool isInvulnerable;
     private Renderer playerRenderer;
     private GameObject player;
+
     private void Start() {
         player = GameObject.Find("Player");
         playerStat = GameObject.FindAnyObjectByType<PlayerStat>();
+        playerStatUI = FindObjectOfType<PlayerStatUI>();
         playerLife = playerStat.getPlayerLife();
         if (playerLife < 1)
             playerLife = 3;
@@ -23,6 +26,8 @@ public class PlayerDamaged : MonoBehaviour
         // Debug.Log($"Player Life : {playerLife}");   // Test output
         if (isInvulnerable)
             playerRenderer.enabled = !playerRenderer.enabled;   // Blinking Effect 
+
+        playerStatUI.UpdateHealthUI(playerLife);
     }
 
     private void OnTriggerEnter(Collider other) {
