@@ -6,13 +6,14 @@ using UnityEngine.AI;
 public class GooseMoving : MonoBehaviour
 {
     NavMeshAgent navMeshAgent; //네비게이션 요소
-    [SerializeField] public Transform target; //쫓아야할 대상
+    public Transform target; //쫓아야할 대상
     Vector3 initial_position; //최초 스폰 위치
     bool isReturning = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         navMeshAgent = GetComponent<NavMeshAgent>(); //길찾기
         initial_position = transform.position;//몬스터 초기 위치 저장
     }
