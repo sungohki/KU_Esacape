@@ -3,20 +3,26 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Umbrella : MonoBehaviour
 {
-    public XRController rightHandController; // ¿À¸¥¼Õ ÄÁÆ®·Ñ·¯¸¦ ¿¬°áÇØ¾ß ÇÕ´Ï´Ù.
-    public Transform umbrella; // Umbrella ¿ÀºêÁ§Æ®¸¦ ¿¬°áÇÕ´Ï´Ù.
+    public XRController rightHandController; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Õ´Ï´ï¿½.
+    public Transform umbrella; // Umbrella ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 
     void Update()
     {
         if (rightHandController)
         {
-            // ¿À¸¥¼Õ ÄÁÆ®·Ñ·¯ÀÇ À§Ä¡¿Í È¸Àü °¡Á®¿À±â
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Vector3 controllerPosition = rightHandController.transform.position;
             Quaternion controllerRotation = rightHandController.transform.rotation;
 
-            // Umbrella ¿ÀºêÁ§Æ®¿¡ ÄÁÆ®·Ñ·¯ÀÇ À§Ä¡¿Í È¸Àü Àû¿ë
+            // Umbrella ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             umbrella.position = controllerPosition;
             umbrella.rotation = controllerRotation;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("object")) {
+            Destroy(other.gameObject);
         }
     }
 }

@@ -4,11 +4,11 @@ public class BoxInteraction : MonoBehaviour
 {
     public GameObject floorKey;
 
-    void OnTriggerEnter(Collider other) {
+    // void OnTriggerEnter(Collider other) {
         // if (other.CompareTag("weapon")) {
-            Destroy(gameObject);
+            // Destroy(gameObject);
         // }
-    }
+    // }
     private void OnDestroy()
     {
         if (floorKey != null) {

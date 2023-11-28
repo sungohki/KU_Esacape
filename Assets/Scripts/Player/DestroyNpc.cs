@@ -6,10 +6,12 @@ public class DestroyNpc : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        // Ãæµ¹ÇÑ ¿ÀºêÁ§Æ®°¡ NPC ÅÂ±×¸¦ °¡Áö°í ÀÖ´Ù¸é
-        if (other.CompareTag("NPC"))
-        {
-            // Ãæµ¹ÇÑ ¿ÀºêÁ§Æ®¸¦ ÆÄ±«
+        // ï¿½æµ¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ NPC ï¿½Â±×¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ù¸ï¿½
+        if (other.CompareTag("NPC")) {
+            // ï¿½æµ¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ä±ï¿½
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Object")) {
             Destroy(other.gameObject);
         }
     }
