@@ -6,6 +6,7 @@ using UnityEngine.AI;
 //스네이크, 클래스는 대문자시작 잊지말기
 public class CatMoving : MonoBehaviour
 {
+
     NavMeshAgent navMeshAgent;
     Vector3 initialPosition;
     bool isSpeedBoosted = false;
@@ -50,5 +51,6 @@ public class CatMoving : MonoBehaviour
             navMeshAgent.speed /= 3.0f; // 원래 속도로 복원
         }
     }
+
 }
 

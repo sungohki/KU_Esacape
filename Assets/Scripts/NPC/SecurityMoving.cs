@@ -5,6 +5,8 @@ using UnityEngine.AI;
 {
     [SerializeField] public float x;
     [SerializeField] public float z;
+    public AudioSource audioSource; // AudioSource 참조 추가
+    public AudioClip hmmSound; // hmm 사운드 클립 추가
 
     public PatrolPoint(float x, float z)
     {
@@ -92,4 +94,5 @@ public class SecurityMoving : MonoBehaviour
         isAngry = true;
         isChasingPlayer = true;
     }
+
 }

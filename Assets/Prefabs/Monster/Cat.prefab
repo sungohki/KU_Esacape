@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1239ffb8165e49840bc8baf0f2d19b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catAttackedSound: {fileID: 8300000, guid: 8d94826f8cf7f8b49b35b53994fd85a3, type: 3}
 --- !u!82 &4447847082178792777
 AudioSource:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
