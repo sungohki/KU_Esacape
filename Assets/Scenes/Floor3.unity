@@ -3155,6 +3155,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 3568663141540665194, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 6625458600921871802, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
       propertyPath: m_IsActive
       value: 0
