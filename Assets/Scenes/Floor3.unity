@@ -1108,6 +1108,74 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47990784}
   m_Mesh: {fileID: 4300000, guid: c33f36ac04fd4ef4eb1421d50ecb1d83, type: 3}
+--- !u!1 &49532193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7996702129474433763, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
+  m_PrefabInstance: {fileID: 109285328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &49532203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49532193}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3, y: 0.33, z: 0.31}
+  m_Center: {x: 0, y: 0.2, z: 0}
+--- !u!23 &49532205
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49532193}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &49757267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,7 +3252,8 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6481156531453245402, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8414442323010639315, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
       insertIndex: -1
@@ -3196,6 +3265,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 225008783}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7996702129474433763, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 49532203}
+    - targetCorrespondingSourceObject: {fileID: 7996702129474433763, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 49532205}
     - targetCorrespondingSourceObject: {fileID: 319273966861297613, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1034097323}
