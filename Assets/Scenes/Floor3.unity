@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09403656, g: 0.11931003, b: 0.15508386, a: 1}
+  m_IndirectSpecularColor: {r: 0.094285674, g: 0.11944742, b: 0.1552324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3083,6 +3083,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5494077721467619361, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 6625458600921871802, guid: 4544c539df00e904f911821b2a69efa0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -26287,6 +26291,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123327955}
   m_Mesh: {fileID: 4300000, guid: 98a3eef7f73edd846970e62f64af6a46, type: 3}
+--- !u!4 &1127362758 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+  m_PrefabInstance: {fileID: 5052795782841536795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129892495
 GameObject:
   m_ObjectHideFlags: 0
@@ -50657,6 +50666,7 @@ Transform:
   - {fileID: 4780051811816534400}
   - {fileID: 3975112699683688853}
   - {fileID: 7441555238987187880}
+  - {fileID: 1127362758}
   m_Father: {fileID: 4108530113939689412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3848810466374501586
@@ -51243,6 +51253,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1001 &5052795782841536795
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3832731250244812354}
+    m_Modifications:
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 49.64729
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7146773
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.065396
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830462763310511886, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832030901148994634, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
+      propertyPath: m_Name
+      value: key_locker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f98e6bd73384f644f9003e095b112db0, type: 3}
 --- !u!33 &5058453491452955772
 MeshFilter:
   m_ObjectHideFlags: 0
