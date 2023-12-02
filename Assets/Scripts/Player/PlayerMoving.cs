@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMoving : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerMoving : MonoBehaviour
     CharacterController cc;
     private float playerSpd;
     private float rotationSpeed = 100f;
+    public Image uiImage;
 
 
     void Start()
@@ -64,5 +66,21 @@ public class PlayerMoving : MonoBehaviour
 
         if (securityGuard != null)
             securityGuard.HearSound(transform.position);
+
+        {
+            // SoundOccur가 호출되었을 때 UI Image를 활성화
+            uiImage.gameObject.SetActive(true);
+
+            Invoke("DisableImage", 1f);
+        }
+    }
+
+    private void DisableImage()
+    {
+        if (uiImage != null)
+        {
+            // 일정 시간(1초 후)에 UI Image를 비활성화
+            uiImage.gameObject.SetActive(false);
+        }
     }
 }
