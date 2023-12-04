@@ -9248,6 +9248,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1302322784}
   m_SourcePrefab: {fileID: 100100000, guid: 26b0828a6cc58be41972adde978498be, type: 3}
+--- !u!114 &719978173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8276200405884288048, guid: 26b0828a6cc58be41972adde978498be, type: 3}
+  m_PrefabInstance: {fileID: 719978172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &721078731
 GameObject:
   m_ObjectHideFlags: 0
@@ -27631,7 +27642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f96ddd061dcbf5041a40eec5baa2b6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHandController: {fileID: 0}
+  rightHandController: {fileID: 719978173}
   umbrella: {fileID: 8234562390160956564}
 --- !u!23 &4787412204087911878
 MeshRenderer:
@@ -28436,7 +28447,7 @@ Transform:
   m_GameObject: {fileID: 424057827597688088}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08517445, y: -0.31437474, z: 0.028333759, w: 0.9450456}
-  m_LocalPosition: {x: -19.2, y: 6.4996, z: -15.599999}
+  m_LocalPosition: {x: -39.845356, y: 5.490141, z: 26.773016}
   m_LocalScale: {x: 1.5, y: 4, z: 1.5000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
