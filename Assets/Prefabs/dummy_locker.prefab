@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1674143152414700, guid: 5c2334af47df6454c9e2eaadbfaa2cb0, type: 3}
       propertyPath: m_Name
-      value: key_locker Variant
+      value: dummy_locker
       objectReference: {fileID: 0}
     - target: {fileID: 1674143152414700, guid: 5c2334af47df6454c9e2eaadbfaa2cb0, type: 3}
       propertyPath: m_TagString
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b318671335d6364c866cd867f7c04d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorKey: {fileID: 2884440954631867374, guid: 427924f91d3a307478c7c5d7bc3efb01, type: 3}
+  floorKey: {fileID: 0}
 --- !u!54 &5042399642388904036
 Rigidbody:
   m_ObjectHideFlags: 0
