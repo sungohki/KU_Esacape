@@ -11,7 +11,10 @@ public class DoorInteaction : MonoBehaviour
         }
 
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
             door.GetComponent<DoorAction>().openDoor();
