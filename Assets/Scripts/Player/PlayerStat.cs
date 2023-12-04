@@ -23,7 +23,8 @@ public class PlayerStat : MonoBehaviour
         
         playerMoveSpeed = 10;
         playerAddSpeed = 1.5f;
-        hasKey = PlayerPrefs.GetInt("hasKey", 0);
+        hasKey = 0;
+        // hasKey = PlayerPrefs.GetInt("hasKey", 0);
 
         if (keyImage != null)
         {
