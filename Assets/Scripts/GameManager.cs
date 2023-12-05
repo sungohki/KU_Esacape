@@ -19,4 +19,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Floor_3");
     }
 
+    public void ClickToStart()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
 }

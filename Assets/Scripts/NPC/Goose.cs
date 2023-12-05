@@ -13,4 +13,14 @@ public class Goose : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public AudioClip gooseAttackedSound; // 파괴 시 재생할 사운드
+
+    void OnDestroy()
+    {
+        if (gooseAttackedSound != null)
+        {
+            SoundManager.instance.PlaySound(gooseAttackedSound);
+        }
+    }
 }
