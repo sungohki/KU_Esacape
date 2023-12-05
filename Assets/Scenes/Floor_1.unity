@@ -5802,11 +5802,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2078325235069695481, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0594025
+      value: 1.18
       objectReference: {fileID: 0}
     - target: {fileID: 2078325235069695481, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.82
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 2078325235069695481, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5840,6 +5840,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Security
       objectReference: {fileID: 0}
+    - target: {fileID: 4882638411494640199, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312771506522173386, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 783393344}
     - target: {fileID: 6312771506522173386, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: patrolPoints.Array.data[0].x
       value: -11
@@ -9553,6 +9561,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7957806167225172823, guid: 6aa2d3c9e99bef54ab0984ca866bf171, type: 3}
   m_PrefabInstance: {fileID: 783124553}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &783393344 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 537947178413292691, guid: 26b0828a6cc58be41972adde978498be, type: 3}
+  m_PrefabInstance: {fileID: 1022197052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &783673807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12616,7 +12629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightColor: {r: 0, g: 1, b: 0, a: 1}
   lightRange: 10
-  lightIntensity: 5
+  lightIntensity: 10
 --- !u!4 &989014990
 Transform:
   m_ObjectHideFlags: 0
@@ -13149,6 +13162,10 @@ PrefabInstance:
     - target: {fileID: 3775267773868495535, guid: 26b0828a6cc58be41972adde978498be, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775267773868495535, guid: 26b0828a6cc58be41972adde978498be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23728,15 +23745,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2078325235069695481, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11
+      value: 23.3
       objectReference: {fileID: 0}
     - target: {fileID: 2078325235069695481, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0594025
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2078325235069695481, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7
+      value: 12.7
       objectReference: {fileID: 0}
     - target: {fileID: 2078325235069695481, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23770,21 +23787,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Security (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4882638411494640199, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6312771506522173386, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 783393344}
     - target: {fileID: 6312771506522173386, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: patrolPoints.Array.data[0].x
-      value: 21
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6312771506522173386, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: patrolPoints.Array.data[0].z
-      value: 70
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6312771506522173386, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: patrolPoints.Array.data[1].x
-      value: 11
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6312771506522173386, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: patrolPoints.Array.data[1].z
-      value: -7
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6877163341434350767, guid: eaed0ac3e85c20f4d9cdcf18406e215d, type: 3}
       propertyPath: m_TagString
@@ -24789,7 +24814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightColor: {r: 0, g: 1, b: 0, a: 1}
   lightRange: 10
-  lightIntensity: 5
+  lightIntensity: 10
 --- !u!4 &1827567268
 Transform:
   m_ObjectHideFlags: 0

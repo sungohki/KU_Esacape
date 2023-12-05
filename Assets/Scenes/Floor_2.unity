@@ -3315,7 +3315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightColor: {r: 0, g: 1, b: 0, a: 1}
   lightRange: 10
-  lightIntensity: 5
+  lightIntensity: 10
 --- !u!4 &411149219
 Transform:
   m_ObjectHideFlags: 0
