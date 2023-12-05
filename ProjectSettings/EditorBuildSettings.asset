@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameStart_VR.unity
     guid: 03ecbf88af5e8984593c4b99fd968507
   - enabled: 1
